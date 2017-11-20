@@ -5,10 +5,11 @@ namespace FC;
 use Cache as KirbyToolkitCache;
 
 /**
- * File
+ * Cache
  *
- * Low level file handling utilities to extend the core kirby methods
- *
+ * Cache wrapper to extend the core kirby methods of
+ * all available drivers
+ * 
  * @package   Kirby Foodchain Toolkit
  * @author    Paul Wagner <paulw@foodchain.com>
  * @link      https://github.com/foodchain
