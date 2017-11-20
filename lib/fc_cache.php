@@ -20,10 +20,10 @@ use Cache as KirbyToolkitCache;
 class Cache extends KirbyToolkitCache {
 
   /**
-   * remove a cache key if its older than a certian amount
-   * @param  Page    $page      [description]
-   * @param  integer $olderThan [description]
-   * @return [type]             [description]
+   * remove a cached page if its older than a certian amount
+   * @param  Page    $page      page cache to remove
+   * @param  integer $olderThan age to expire
+   * @return void
    */
    public static function removeIf($page, $olderThan = 3600) {
         //$cacheId is created the same way kirby does it
