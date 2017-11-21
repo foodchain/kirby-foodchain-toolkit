@@ -1,4 +1,7 @@
 <?php
+// Include extensions
+include __DIR__ . DS . 'extensions' . DS . 'page-methods.php';
+
 // using the mini autoloader from /kirby/vendor/getkirby/toolkit/bootstrap.php
 load(array(
   // classes

@@ -20,15 +20,12 @@ use Cache as KirbyToolkitCache;
 class Cache extends KirbyToolkitCache {
 
   /**
-   * remove a cached page if its older than a certian amount
-   * @param  Page    $page      page cache to remove
-   * @param  integer $olderThan age to expire
-   * @return void
-   */
-   public static function removeIf($page, $olderThan = 3600) {
-        //$cacheId is created the same way kirby does it
-        //in around line 603 in the kirby/kirby.php core file
-        $cacheId = md5(url::current() . $page->representation());
+  * remove cache key if older than a specified age in seconds
+  * @param  string $cacheId    id of cache item to delete;
+  * @param  integer $olderThan age to expire if
+  * @return void
+  */
+  public static function removeIf($cacheId, $olderThan = 3600) {
         if (time() - cache::created($cacheId) > $olderThan) {
           cache::remove($cacheId);
         }
